@@ -1,0 +1,13 @@
+html {
+  background-color: #ffff00;
+}
+body {
+  margin: 0 !important;
+}
+h1 {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
