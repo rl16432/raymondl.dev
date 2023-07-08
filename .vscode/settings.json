@@ -25,7 +25,7 @@
   "jest.showCoverageOnLoad": true, // Show code coverage when the project is launched
   // Multiple language settings for json and jsonc files
   "[json][jsonc]": {
-    "editor.formatOnSave": true,
+    "editor.formatOnSave": false,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
