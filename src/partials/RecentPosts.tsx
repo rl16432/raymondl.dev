@@ -1,10 +1,10 @@
-import type { MarkdownInstance } from 'astro';
+import type { CollectionEntry } from 'astro:content';
 
-import type { IFrontmatter } from '@/components';
 import { BlogGallery, GradientText, Section } from '@/components';
 
 type IRecentPostsProps = {
-  postList: MarkdownInstance<IFrontmatter>[];
+  postList: CollectionEntry<'posts'>[];
+  urls: string[];
 };
 
 const RecentPosts = (props: IRecentPostsProps) => (
@@ -21,7 +21,7 @@ const RecentPosts = (props: IRecentPostsProps) => (
       </div>
     }
   >
-    <BlogGallery postList={props.postList} />
+    <BlogGallery postList={props.postList} urls={props.urls} />
   </Section>
 );
 

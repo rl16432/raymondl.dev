@@ -1,16 +1,19 @@
 ---
-import type { IFrontmatter } from '@/components';
+import { getCollection } from 'astro:content';
+
+import Base from '@/layouts/Base.astro';
 import { CTA } from '@/partials/CTA';
 import { Hero } from '@/partials/Hero';
 import { ProjectList } from '@/partials/ProjectList';
 import { RecentPosts } from '@/partials/RecentPosts';
-import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 import { sortByDate } from '@/utils/Posts';
+import { getUrl } from '@/utils/URLMap';
 
-const allPosts = await Astro.glob<IFrontmatter>('./posts/*.md');
+const allPosts = await getCollection('posts');
 const sortedPosts = sortByDate(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
+const urls = lastThreePosts.map((post) => `${getUrl('posts')}/${post.slug}/`);
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -19,6 +22,6 @@ const { description } = AppConfig;
 <Base head={{ title, description }}>
   <Hero />
   <ProjectList />
-  <RecentPosts postList={lastThreePosts} />
+  <RecentPosts postList={lastThreePosts} urls={urls} />
   <CTA />
 </Base>

@@ -1,11 +1,11 @@
 import type { ReactNode } from 'react';
 
-import type { IFrontmatter } from '@/components';
 import { PostContent, PostHeader, Section } from '@/components';
+import type { PostFrontmatter } from '@/content/_schemas';
 import { AppConfig } from '@/utils/AppConfig';
 
 type IBlogPostProps = {
-  frontmatter: IFrontmatter;
+  frontmatter: PostFrontmatter;
   children: ReactNode;
 };
 

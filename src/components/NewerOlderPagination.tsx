@@ -1,7 +1,8 @@
-import type { FrontmatterPage } from './types/IFrontMatter';
+import type { Page } from 'astro';
+import type { CollectionEntry } from 'astro:content';
 
 type INewerOlderPaginationProps = {
-  page: FrontmatterPage;
+  page: Page<CollectionEntry<'posts'>>;
 };
 
 const NewerOlderPagination = (props: INewerOlderPaginationProps) => (

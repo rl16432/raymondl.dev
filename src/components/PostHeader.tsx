@@ -1,21 +1,23 @@
 import { format } from 'date-fns';
 
-import type { IFrontmatter } from './types/IFrontMatter';
+import type { PostFrontmatter } from '@/content/_schemas';
 
 type IPostHeaderProps = {
-  content: IFrontmatter;
+  content: PostFrontmatter;
   author: string;
 };
 
-const PostHeader = (props: IPostHeaderProps) => (
-  <>
-    <h1 className="text-center text-3xl font-bold">{props.content.title}</h1>
+const PostHeader = (props: IPostHeaderProps) => {
+  return (
+    <>
+      <h1 className="text-center text-3xl font-bold">{props.content.title}</h1>
 
-    <div className="mt-2 text-center text-sm text-gray-400">
-      By {props.author} on{' '}
-      {format(new Date(props.content.pubDate), 'LLL d, yyyy')}
-    </div>
-  </>
-);
+      <div className="mt-2 text-center text-sm text-gray-400">
+        By {props.author} on{' '}
+        {format(new Date(props.content.pubDate), 'LLL d, yyyy')}
+      </div>
+    </>
+  );
+};
 
 export { PostHeader };

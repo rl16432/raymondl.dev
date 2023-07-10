@@ -101,6 +101,7 @@
         "simple-import-sort"
       ],
       "extends": [
+        "plugin:astro/recommended",
         "plugin:tailwindcss/recommended",
         "airbnb-typescript",
         "plugin:prettier/recommended"
@@ -133,7 +134,7 @@
         "import/no-unresolved": [
           "error",
           {
-            "ignore": ["@/*"]
+            "ignore": ["@/*", "astro:content"]
           }
         ], // Disable no-unresolved rule for .astro files
         "react/jsx-filename-extension": [1, { "extensions": [".astro"] }], // Accept jsx in astro files

@@ -1,22 +1,26 @@
 ---
-import type { FrontmatterPage, IFrontmatter } from '@/components';
+import type { Page } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+
 import {
   BlogGallery,
   NewerOlderPagination,
   PaginationHeader,
   Section,
 } from '@/components';
+import Base from '@/layouts/Base.astro';
 import { CTA } from '@/partials/CTA';
-import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 import { sortByDate } from '@/utils/Posts';
+import { getUrl } from '@/utils/URLMap';
 
 type GetStaticPaths = {
   paginate: any;
 }; // Overrides `GetStaticPathsOptions` types from Astro
 
 export async function getStaticPaths({ paginate }: GetStaticPaths) {
-  const allPosts = await Astro.glob<IFrontmatter>('./*.md');
+  const allPosts = await getCollection('posts');
   const sortedPosts = sortByDate(allPosts);
 
   // Return a paginated collection of paths for all posts
@@ -24,15 +28,16 @@ export async function getStaticPaths({ paginate }: GetStaticPaths) {
 }
 
 interface Props {
-  page: FrontmatterPage;
+  page: Page<CollectionEntry<'posts'>>;
 }
 
-const { page } = Astro.props as Props;
+const { page } = Astro.props;
 const titleSuffix = ` - ${AppConfig.site_name}`;
 const titleBase = `Blog page ${page.currentPage}`;
 const title = titleBase + titleSuffix;
 const description =
   'Pagination example built with Astro styled with Tailwind CSS.';
+const urls = page.data.map((post) => `${getUrl('posts')}/${post.slug}/`);
 ---
 
 <Base head={{ title, description }}>
@@ -44,7 +49,7 @@ const description =
   </Section>
 
   <Section>
-    <BlogGallery postList={page.data} />
+    <BlogGallery postList={page.data} urls={urls} />
   </Section>
 
   <Section>
