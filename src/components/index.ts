@@ -16,31 +16,21 @@ import { PostHeader } from './PostHeader';
 import { Project } from './Project';
 import { Section } from './Section';
 import { ColorTags, Tags } from './Tags';
-import type {
-  FrontmatterPage,
-  IFrontmatter,
-  MarkdownInstance,
-  Page,
-} from './types/IFrontMatter';
 
 export {
   BlogCard,
   BlogGallery,
   ColorTags,
   FooterCopyright,
-  type FrontmatterPage,
   GradientText,
   HeroAvatar,
   HeroSocial,
-  type IFrontmatter,
   Logo,
-  type MarkdownInstance,
   NavbarTwoColumns,
   NavMenu,
   NavMenuItem,
   NewerOlderPagination,
   Newsletter,
-  type Page,
   PaginationHeader,
   PostContent,
   PostHeader,

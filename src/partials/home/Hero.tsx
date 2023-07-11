@@ -1,4 +1,4 @@
-import { GradientText, HeroAvatar, HeroSocial, Section } from '@/components';
+import { GradientText, HeroAvatar, Section } from '@/components';
 
 const Hero = () => (
   <Section>
@@ -24,7 +24,7 @@ const Hero = () => (
       }
       socialButtons={
         <>
-          <a href="/">
+          {/* <a href="/">
             <HeroSocial
               src="/assets/images/twitter-icon.png"
               alt="Twitter icon"
@@ -47,7 +47,7 @@ const Hero = () => (
               src="/assets/images/youtube-icon.png"
               alt="Youtube icon"
             />
-          </a>
+          </a> */}
         </>
       }
     />
