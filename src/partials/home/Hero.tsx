@@ -15,12 +15,14 @@ const Hero = () => (
         </>
       }
       avatar={
-        <img
-          className="h-80 w-64"
-          src="/assets/images/avatar.svg"
-          alt="Avatar image"
-          loading="lazy"
-        />
+        <div className="h-auto max-w-xs rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1">
+          <img
+            className="h-full rounded-md"
+            src="/assets/images/me.jpg"
+            alt="Me!"
+            loading="lazy"
+          />
+        </div>
       }
       socialButtons={
         <>

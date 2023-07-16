@@ -8,7 +8,10 @@ const AboutMe = () => (
       </>
     }
   >
-    Hi
+    <p className="text-lg">
+      I love to combine my skills and interests to create memorable experiences
+      for the people around me.
+    </p>
   </Section>
 );
 
