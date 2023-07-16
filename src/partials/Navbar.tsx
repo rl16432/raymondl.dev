@@ -23,7 +23,7 @@ const Navbar = () => (
         <NavMenuItem href="https://github.com/rl16432/" openNewTab={true}>
           <img
             className="w-7 hover:brightness-75"
-            src="/assets/images/github.svg"
+            src="/assets/images/github-icon.svg"
           />
         </NavMenuItem>
         <NavMenuItem
@@ -33,6 +33,12 @@ const Navbar = () => (
           <img
             className="w-7 hover:brightness-75"
             src="/assets/images/linkedin.svg"
+          />
+        </NavMenuItem>
+        <NavMenuItem href="mailto:me@raymondl.dev" openNewTab={true}>
+          <img
+            className="w-7 hover:brightness-75"
+            src="/assets/images/mail-icon.svg"
           />
         </NavMenuItem>
       </NavMenu>
