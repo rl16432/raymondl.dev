@@ -5,9 +5,10 @@ import {
   NavMenuItem,
   Section,
 } from '@/components';
+import { EMAIL_ADDRESS, GITHUB_URL, LINKEDIN_URL } from '@/constants';
 
 const Navbar = () => (
-  <Section>
+  <Section className="sticky top-0 z-[100] bg-slate-900/50 backdrop-blur-lg">
     <NavbarTwoColumns>
       <a href="/">
         <Logo
@@ -20,25 +21,25 @@ const Navbar = () => (
         <NavMenuItem href="/posts/" openNewTab={false}>
           Blogs
         </NavMenuItem>
-        <NavMenuItem href="https://github.com/rl16432/" openNewTab={true}>
+        <NavMenuItem href={GITHUB_URL} openNewTab={true}>
           <img
             className="w-7 hover:brightness-75"
             src="/assets/images/github-icon.svg"
+            alt="GitHub icon"
           />
         </NavMenuItem>
-        <NavMenuItem
-          href="https://www.linkedin.com/in/raymond-luo-dev/"
-          openNewTab={true}
-        >
+        <NavMenuItem href={LINKEDIN_URL} openNewTab={true}>
           <img
             className="w-7 hover:brightness-75"
             src="/assets/images/linkedin.svg"
+            alt="LinkedIn icon"
           />
         </NavMenuItem>
-        <NavMenuItem href="mailto:me@raymondl.dev" openNewTab={true}>
+        <NavMenuItem href={`mailto:${EMAIL_ADDRESS}`} openNewTab={true}>
           <img
             className="w-7 hover:brightness-75"
             src="/assets/images/mail-icon.svg"
+            alt="Mail icon"
           />
         </NavMenuItem>
       </NavMenu>
