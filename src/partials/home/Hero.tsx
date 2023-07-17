@@ -1,5 +1,10 @@
-import { GradientText, HeroAvatar, Section } from '@/components';
-import { GRADIENT_MAIN } from '@/constants';
+import { GradientText, HeroAvatar, HeroSocial, Section } from '@/components';
+import {
+  EMAIL_ADDRESS,
+  GITHUB_URL,
+  GRADIENT_MAIN,
+  LINKEDIN_URL,
+} from '@/constants';
 
 const Hero = () => (
   <Section>
@@ -29,30 +34,18 @@ const Hero = () => (
       }
       socialButtons={
         <>
-          {/* <a href="/">
+          <a href={GITHUB_URL}>
             <HeroSocial
-              src="/assets/images/twitter-icon.png"
-              alt="Twitter icon"
+              src="/assets/images/github-icon.svg"
+              alt="GitHub icon"
             />
           </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/facebook-icon.png"
-              alt="Facebook icon"
-            />
+          <a href={LINKEDIN_URL}>
+            <HeroSocial src="/assets/images/linkedin.svg" alt="LinkedIn icon" />
           </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/linkedin-icon.png"
-              alt="Linkedin icon"
-            />
+          <a href={`mailto:${EMAIL_ADDRESS}`}>
+            <HeroSocial src="/assets/images/mail-icon.svg" alt="Mail icon" />
           </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/youtube-icon.png"
-              alt="Youtube icon"
-            />
-          </a> */}
         </>
       }
     />
