@@ -1,5 +1,10 @@
 import { z } from 'astro:content';
 
+export const hobbySchema = z.object({
+  title: z.string().optional(),
+  description: z.string(),
+});
+
 export const postSchema = z.object({
   title: z.string(),
   description: z.string(),
@@ -10,3 +15,4 @@ export const postSchema = z.object({
 });
 
 export type PostFrontmatter = z.infer<typeof postSchema>;
+export type HobbyDetails = z.infer<typeof hobbySchema>;

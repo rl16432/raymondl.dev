@@ -1,5 +1,7 @@
+import { AboutMeEntry } from './AboutMe/AboutMeEntry';
 import { BlogCard } from './BlogCard';
 import { BlogGallery } from './BlogGallery';
+import { BulletList } from './BulletList';
 import { FooterCopyright } from './FooterCopyright';
 import { GradientText } from './GradientText';
 import { HeroAvatar } from './HeroAvatar';
@@ -18,8 +20,10 @@ import { Section } from './Section';
 import { ColorTags, Tags } from './Tags';
 
 export {
+  AboutMeEntry,
   BlogCard,
   BlogGallery,
+  BulletList,
   ColorTags,
   FooterCopyright,
   GradientText,

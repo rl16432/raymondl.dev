@@ -1,4 +1,5 @@
 import { GradientText, HeroAvatar, Section } from '@/components';
+import { GRADIENT_MAIN } from '@/constants';
 
 const Hero = () => (
   <Section>
@@ -15,9 +16,11 @@ const Hero = () => (
         </>
       }
       avatar={
-        <div className="h-auto max-w-xs rounded-md bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 p-1">
+        <div
+          className={`h-auto max-w-xs rounded-md bg-gradient-to-r ${GRADIENT_MAIN} p-1`}
+        >
           <img
-            className="h-full rounded-md"
+            className="rounded-md"
             src="/assets/images/me.jpg"
             alt="Me!"
             loading="lazy"
