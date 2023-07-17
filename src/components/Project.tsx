@@ -7,12 +7,13 @@ type IProjectProps = {
   };
   name: string;
   description: string;
+  source?: string;
   link: string;
   category: ReactNode;
 };
 
 const Project = (props: IProjectProps) => (
-  <div className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
+  <div className="flex flex-row items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
     <div className="shrink-0">
       <a href={props.link}>
         <img
@@ -23,7 +24,6 @@ const Project = (props: IProjectProps) => (
         />
       </a>
     </div>
-
     <div>
       <div className="flex flex-col items-center gap-y-2 md:flex-row">
         <a className="hover:text-cyan-400" href={props.link}>
@@ -35,6 +35,17 @@ const Project = (props: IProjectProps) => (
 
       <p className="mt-3 text-gray-400">{props.description}</p>
     </div>
+    {props.source !== undefined ? (
+      <a
+        href={props.source}
+        target="_blank"
+        className="ml-auto mr-5 w-10 flex-none hover:translate-y-1"
+      >
+        <img className="w-full" src="/assets/images/source-icon.svg" />
+      </a>
+    ) : (
+      <></>
+    )}
   </div>
 );
 

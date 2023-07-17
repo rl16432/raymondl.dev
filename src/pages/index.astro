@@ -2,7 +2,6 @@
 import { getCollection } from 'astro:content';
 
 import Base from '@/layouts/Base.astro';
-import { CTA } from '@/partials/CTA';
 import AboutMe from '@/partials/home/AboutMe.astro';
 import { Hero } from '@/partials/home/Hero';
 import { ProjectList } from '@/partials/home/ProjectList';
@@ -25,5 +24,4 @@ const { description } = AppConfig;
   <AboutMe />
   <ProjectList />
   <RecentPosts postList={lastThreePosts} urls={urls} />
-  <CTA />
 </Base>
