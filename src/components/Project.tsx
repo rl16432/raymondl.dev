@@ -13,7 +13,7 @@ type IProjectProps = {
 };
 
 const Project = (props: IProjectProps) => (
-  <div className="flex flex-row items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
+  <div className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-4 md:flex-row">
     <div className="shrink-0">
       <a href={props.link}>
         <img
@@ -39,7 +39,7 @@ const Project = (props: IProjectProps) => (
       <a
         href={props.source}
         target="_blank"
-        className="ml-auto mr-5 w-10 flex-none hover:translate-y-1"
+        className="mt-5 w-10 flex-none hover:translate-y-1 md:ml-auto md:mr-5"
       >
         <img className="w-full" src="/assets/images/source-icon.svg" />
       </a>
