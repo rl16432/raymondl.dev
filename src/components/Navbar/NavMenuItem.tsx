@@ -7,14 +7,14 @@ type INavMenuItemProps = {
 };
 
 const NavMenuItem = (props: INavMenuItemProps) => (
-  <li className="hover:text-white">
+  <div className="hover:text-white">
     <a
       target={props.openNewTab === true ? '_blank' : '_self'}
       href={props.href}
     >
       {props.children}
     </a>
-  </li>
+  </div>
 );
 
 export { NavMenuItem };

@@ -7,9 +7,9 @@ import { GradientText } from './GradientText';
 import { HeroAvatar } from './HeroAvatar';
 import { HeroSocial } from './HeroSocial';
 import { Logo } from './Logo';
-import { NavbarTwoColumns } from './NavbarTwoColumns';
-import { NavMenu } from './NavMenu';
-import { NavMenuItem } from './NavMenuItem';
+import { NavbarResponsive } from './Navbar/NavbarResponsive';
+import { NavMenu } from './Navbar/NavMenu';
+import { NavMenuItem } from './Navbar/NavMenuItem';
 import { NewerOlderPagination } from './NewerOlderPagination';
 import { Newsletter } from './Newsletter';
 import { PaginationHeader } from './PaginationHeader';
@@ -30,7 +30,7 @@ export {
   HeroAvatar,
   HeroSocial,
   Logo,
-  NavbarTwoColumns,
+  NavbarResponsive,
   NavMenu,
   NavMenuItem,
   NewerOlderPagination,
