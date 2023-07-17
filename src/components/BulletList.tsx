@@ -1,3 +1,5 @@
+import { v4 as uuidv4 } from 'uuid';
+
 import { GradientText } from './GradientText';
 
 interface IBulletListProps {
@@ -13,7 +15,7 @@ const BulletList = ({ points }: IBulletListProps) => {
   return (
     <ul className="flex-auto list-none space-y-2 text-lg">
       {points.map((p) => (
-        <li>
+        <li key={uuidv4()}>
           {p.title !== undefined ? (
             <>
               <span className="font-bold">
