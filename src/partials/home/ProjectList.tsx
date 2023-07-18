@@ -15,9 +15,7 @@ const ProjectList = () => (
           Recent <GradientText>Projects</GradientText>
         </div>
 
-        <ViewAllButton>
-          <a href="/projects/">View all projects →</a>
-        </ViewAllButton>
+        <ViewAllButton href="/projects/">View all projects →</ViewAllButton>
       </div>
     }
   >

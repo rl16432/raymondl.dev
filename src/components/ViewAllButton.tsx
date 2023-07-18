@@ -1,21 +1,21 @@
 import type { ReactNode } from 'react';
 
 interface IViewAllButtonProps {
-  onClick?: () => any;
+  href: string;
   children: ReactNode;
   className?: string;
 }
 
 const ViewAllButton = (props: IViewAllButtonProps) => {
   return (
-    <button
-      onClick={props.onClick}
+    <a
       className={`${
         props.className === undefined ? '' : `${props.className} `
-      }w-40 rounded-xl bg-blue-600 p-2 text-sm`}
+      }block w-40 rounded-xl bg-blue-600 p-2 text-center text-sm`}
+      href={props.href}
     >
       {props.children}
-    </button>
+    </a>
   );
 };
 
