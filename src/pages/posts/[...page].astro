@@ -33,10 +33,9 @@ interface Props {
 
 const { page } = Astro.props;
 const titleSuffix = ` - ${AppConfig.site_name}`;
-const titleBase = `Blog page ${page.currentPage}`;
+const titleBase = `Blogs page ${page.currentPage}`;
 const title = titleBase + titleSuffix;
-const description =
-  'Pagination example built with Astro styled with Tailwind CSS.';
+const description = 'raymondl.dev blog posts';
 const urls = page.data.map((post) => `${getUrl('posts')}/${post.slug}/`);
 ---
 

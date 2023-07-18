@@ -1,5 +1,5 @@
 import { Logo, NavbarResponsive, NavMenuItem, Section } from '@/components';
-import { EMAIL_ADDRESS, GITHUB_URL, LINKEDIN_URL } from '@/constants';
+import { EMAIL_ADDRESS, GITHUB_URL, LINKEDIN_URL } from '@/constants/links';
 
 const Navbar = () => (
   <Section className="sticky top-0 z-[100] bg-slate-900/50 backdrop-blur-lg">

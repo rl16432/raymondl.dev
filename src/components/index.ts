@@ -17,7 +17,7 @@ import { PostContent } from './PostContent';
 import { PostHeader } from './PostHeader';
 import { Project } from './Project';
 import { Section } from './Section';
-import { ColorTags, Tags } from './Tags';
+import { Tags } from './Tags';
 import { ViewAllButton } from './ViewAllButton';
 
 export {
@@ -25,7 +25,6 @@ export {
   BlogCard,
   BlogGallery,
   BulletList,
-  ColorTags,
   FooterCopyright,
   GradientText,
   HeroAvatar,

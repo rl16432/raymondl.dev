@@ -1,0 +1,69 @@
+---
+import type { Page } from 'astro';
+import type { CollectionEntry } from 'astro:content';
+import { getCollection } from 'astro:content';
+
+import {
+  NewerOlderPagination,
+  PaginationHeader,
+  Project,
+  Section,
+  Tags,
+} from '@/components';
+import { SKILL_COLOR_MAP } from '@/constants/skillTagColors';
+import Base from '@/layouts/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+type GetStaticPaths = {
+  paginate: any;
+}; // Overrides `GetStaticPathsOptions` types from Astro
+
+export async function getStaticPaths({ paginate }: GetStaticPaths) {
+  const allProjects = await getCollection('projects');
+
+  // Return a paginated collection of paths for all posts
+  return paginate(allProjects, { pageSize: 6 });
+}
+
+interface Props {
+  page: Page<CollectionEntry<'projects'>>;
+}
+
+const { page } = Astro.props;
+const title = `Projects - ${AppConfig.site_name} - ${page.currentPage}`;
+const description = 'A page for all my notable projects';
+---
+
+<Base head={{ title, description }}>
+  <Section>
+    <PaginationHeader
+      title="Projects"
+      description="Some of the things I've worked on"
+    />
+  </Section>
+  <Section>
+    <div class="flex flex-col gap-6">
+      {
+        page.data.map((p) => (
+          <Project
+            name={p.data.name}
+            description={p.data.description}
+            link={p.slug}
+            img={{ src: p.data.imgSrc, alt: p.data.imgAlt }}
+            category={undefined}
+            source="https://github.com/rl16432/unlimited-wordle"
+          >
+            <Fragment slot="category">
+              {p.data.skills.map((skill) => (
+                <Tags color={SKILL_COLOR_MAP[skill]}>{skill}</Tags>
+              ))}
+            </Fragment>
+          </Project>
+        ))
+      }
+    </div>
+  </Section>
+  <Section>
+    <NewerOlderPagination page={page} />
+  </Section>
+</Base>@/constants/skillTagColors

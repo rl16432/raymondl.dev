@@ -6,6 +6,7 @@ type UrlMap = Partial<{
 
 const urls: UrlMap = {
   posts: '/posts',
+  projects: '/projects',
 };
 
 export const getUrl = (collection: keyof typeof urls, slug?: string) => {

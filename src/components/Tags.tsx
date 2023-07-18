@@ -1,31 +1,7 @@
 import type { ReactNode } from 'react';
 
-import type { Values } from './types/TypeUnion';
-
-export const ColorTags = {
-  SLATE: 'SLATE',
-  GRAY: 'GRAY',
-  ZINC: 'ZINC',
-  NEUTRAL: 'NEUTRAL',
-  STONE: 'STONE',
-  RED: 'RED',
-  ORANGE: 'ORANGE',
-  AMBER: 'AMBER',
-  YELLOW: 'YELLOW',
-  LIME: 'LIME',
-  GREEN: 'GREEN',
-  EMERALD: 'EMERALD',
-  TEAL: 'TEAL',
-  CYAN: 'CYAN',
-  SKY: 'SKY',
-  BLUE: 'BLUE',
-  INDIGO: 'INDIGO',
-  VIOLET: 'VIOLET',
-  PURPLE: 'PURPLE',
-  FUCHSIA: 'FUCHSIA',
-  PINK: 'PINK',
-  ROSE: 'ROSE',
-} as const;
+import { ColorTags } from '@/constants/skillTagColors';
+import type { Values } from '@/types/TypeUnion';
 
 type ITagsProps = {
   color: Values<typeof ColorTags>;

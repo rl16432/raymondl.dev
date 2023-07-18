@@ -1,11 +1,11 @@
 import {
-  ColorTags,
   GradientText,
   Project,
   Section,
   Tags,
   ViewAllButton,
 } from '@/components';
+import { ColorTags } from '@/constants/skillTagColors';
 
 const ProjectList = () => (
   <Section

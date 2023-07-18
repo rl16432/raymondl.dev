@@ -2,7 +2,7 @@ import type { Page } from 'astro';
 import type { CollectionEntry } from 'astro:content';
 
 type INewerOlderPaginationProps = {
-  page: Page<CollectionEntry<'posts'>>;
+  page: Page<CollectionEntry<any>>;
 };
 
 const NewerOlderPagination = (props: INewerOlderPaginationProps) => (

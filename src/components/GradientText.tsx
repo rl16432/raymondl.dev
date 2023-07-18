@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import { GRADIENT_MAIN } from '@/constants';
+import { GRADIENT_MAIN } from '@/constants/styles';
 
 type IGradientTextProps = {
   children: ReactNode;

@@ -1,10 +1,6 @@
 import { GradientText, HeroAvatar, HeroSocial, Section } from '@/components';
-import {
-  EMAIL_ADDRESS,
-  GITHUB_URL,
-  GRADIENT_MAIN,
-  LINKEDIN_URL,
-} from '@/constants';
+import { EMAIL_ADDRESS, GITHUB_URL, LINKEDIN_URL } from '@/constants/links';
+import { GRADIENT_MAIN } from '@/constants/styles';
 
 const Hero = () => (
   <Section>
