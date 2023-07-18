@@ -18,6 +18,7 @@ import { PostHeader } from './PostHeader';
 import { Project } from './Project';
 import { Section } from './Section';
 import { ColorTags, Tags } from './Tags';
+import { ViewAllButton } from './ViewAllButton';
 
 export {
   AboutMeEntry,
@@ -41,4 +42,5 @@ export {
   Project,
   Section,
   Tags,
+  ViewAllButton,
 };

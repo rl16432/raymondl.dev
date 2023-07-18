@@ -1,11 +1,24 @@
-import { ColorTags, GradientText, Project, Section, Tags } from '@/components';
+import {
+  ColorTags,
+  GradientText,
+  Project,
+  Section,
+  Tags,
+  ViewAllButton,
+} from '@/components';
 
 const ProjectList = () => (
   <Section
     title={
-      <>
-        Recent <GradientText>Projects</GradientText>
-      </>
+      <div className="flex items-center justify-between">
+        <div>
+          Recent <GradientText>Projects</GradientText>
+        </div>
+
+        <ViewAllButton>
+          <a href="/projects/">View all projects →</a>
+        </ViewAllButton>
+      </div>
     }
   >
     <div className="flex flex-col gap-6">

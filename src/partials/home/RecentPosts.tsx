@@ -1,6 +1,11 @@
 import type { CollectionEntry } from 'astro:content';
 
-import { BlogGallery, GradientText, Section } from '@/components';
+import {
+  BlogGallery,
+  GradientText,
+  Section,
+  ViewAllButton,
+} from '@/components';
 
 type IRecentPostsProps = {
   postList: CollectionEntry<'posts'>[];
@@ -10,14 +15,14 @@ type IRecentPostsProps = {
 const RecentPosts = (props: IRecentPostsProps) => (
   <Section
     title={
-      <div className="flex items-baseline justify-between">
+      <div className="flex items-center justify-between">
         <div>
           Recent <GradientText>Posts</GradientText>
         </div>
 
-        <div className="text-sm">
-          <a href="/posts/">View all Posts →</a>
-        </div>
+        <ViewAllButton>
+          <a href="/posts/">View all posts →</a>
+        </ViewAllButton>
       </div>
     }
   >
