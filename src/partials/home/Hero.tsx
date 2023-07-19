@@ -20,12 +20,7 @@ const Hero = () => (
         <div
           className={`h-auto max-w-xs rounded-md bg-gradient-to-r ${GRADIENT_MAIN} p-1`}
         >
-          <img
-            className="rounded-md"
-            src="/assets/images/me.jpg"
-            alt="Me!"
-            loading="lazy"
-          />
+          <img className="rounded-md" src="/assets/images/me.jpg" alt="Me!" />
         </div>
       }
       socialButtons={

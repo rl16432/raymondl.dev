@@ -14,7 +14,6 @@ const PostContent = (props: IPostContentProps) => (
         className="h-full w-full rounded-lg object-cover object-center"
         src={props.content.imgSrc}
         alt={props.content.imgAlt}
-        loading="lazy"
       />
     </div>
 

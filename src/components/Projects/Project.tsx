@@ -20,7 +20,6 @@ const Project = (props: IProjectProps) => (
           className="h-36 w-36 hover:translate-y-1"
           src={props.img.src}
           alt={props.img.alt}
-          loading="lazy"
         />
       </a>
     </div>
