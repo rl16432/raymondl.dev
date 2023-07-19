@@ -14,7 +14,9 @@ const title = `${frontmatter.name} - Projects - ${AppConfig.site_name}`;
 
 <Base head={{ title, description: frontmatter.description }}>
   <Section>
-    <div class="prose prose-invert mt-8 prose-img:rounded-lg">
+    <div
+      class="prose prose-invert mx-auto mt-8 max-w-3xl prose-table:text-base prose-img:rounded-lg prose-img:border-2 prose-img:border-sky-500"
+    >
       <slot />
     </div>
   </Section>
