@@ -1,9 +1,13 @@
 ---
-title: Hello Lorem ipsum dolor sit
-description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi.
-pubDate: 2020-01-01T00:00:00Z
-imgSrc: '/assets/images/image-post6.jpeg'
-imgAlt: 'Image post 6'
+title: Hello
+description: How are you
+pubDate: 2023-07-18T06:33:00Z
+imgSrc: '/assets/images/image-post.jpeg'
+imgAlt: 'Image post'
 ---
 
-Full typography example at [this page](../sixth-post/).
+### HELLO. HOW ARE YOU?
+
+```javascript
+console.log('I AM GOOD');
+```
