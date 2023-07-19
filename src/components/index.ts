@@ -1,6 +1,8 @@
 import { AboutMeEntry } from './AboutMe/AboutMeEntry';
-import { BlogCard } from './BlogCard';
-import { BlogGallery } from './BlogGallery';
+import { BlogCard } from './Blog/BlogCard';
+import { BlogGallery } from './Blog/BlogGallery';
+import { PostContent } from './Blog/PostContent';
+import { PostHeader } from './Blog/PostHeader';
 import { BulletList } from './BulletList';
 import { FooterCopyright } from './FooterCopyright';
 import { GradientText } from './GradientText';
@@ -13,9 +15,8 @@ import { NavMenuItem } from './Navbar/NavMenuItem';
 import { NewerOlderPagination } from './NewerOlderPagination';
 import { Newsletter } from './Newsletter';
 import { PaginationHeader } from './PaginationHeader';
-import { PostContent } from './PostContent';
-import { PostHeader } from './PostHeader';
-import { Project } from './Project';
+import { Project } from './Projects/Project';
+import { ProjectCatalog } from './Projects/ProjectCatalog';
 import { Section } from './Section';
 import { Tags } from './Tags';
 import { ViewAllButton } from './ViewAllButton';
@@ -39,6 +40,7 @@ export {
   PostContent,
   PostHeader,
   Project,
+  ProjectCatalog,
   Section,
   Tags,
   ViewAllButton,

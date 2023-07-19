@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 
 interface IViewAllButtonProps {
-  href: string;
+  href?: string;
   children: ReactNode;
   className?: string;
 }
