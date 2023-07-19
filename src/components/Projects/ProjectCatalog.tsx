@@ -8,17 +8,18 @@ import { Project } from './Project';
 
 type IProjectListProps = {
   projects: CollectionEntry<'projects'>[];
+  urls: string[];
 };
 
 const ProjectCatalog = (props: IProjectListProps) => {
   return (
     <div className="flex flex-col gap-6">
-      {props.projects.map((p) => (
+      {props.projects.map((p, i) => (
         <Project
           key={uuidv4()}
           name={p.data.name}
           description={p.data.description}
-          link={p.slug}
+          link={props.urls[i]}
           img={{ src: p.data.imgSrc, alt: p.data.imgAlt }}
           category={
             <>

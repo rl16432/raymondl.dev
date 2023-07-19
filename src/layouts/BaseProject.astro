@@ -1,0 +1,21 @@
+---
+import { Section } from '@/components';
+import type { ProjectFrontmatter } from '@/content/_schemas';
+import Base from '@/layouts/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+
+export interface Props {
+  frontmatter: ProjectFrontmatter;
+}
+
+const { frontmatter } = Astro.props as Props;
+const title = `${frontmatter.name} - ${AppConfig.site_name}`;
+---
+
+<Base head={{ title, description: frontmatter.description }}>
+  <Section>
+    <div class="prose prose-invert mt-8 prose-img:rounded-lg">
+      <slot />
+    </div>
+  </Section>
+</Base>

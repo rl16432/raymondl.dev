@@ -8,7 +8,7 @@ type IProjectProps = {
   name: string;
   description: string;
   source?: string;
-  link: string;
+  link?: string;
   category: ReactNode;
 };
 

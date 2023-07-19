@@ -11,6 +11,7 @@ import {
 } from '@/components';
 import Base from '@/layouts/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
+import { getUrl } from '@/utils/URLMap';
 
 type GetStaticPaths = {
   paginate: any;
@@ -20,7 +21,7 @@ export async function getStaticPaths({ paginate }: GetStaticPaths) {
   const allProjects = await getCollection('projects');
 
   // Return a paginated collection of paths for all posts
-  return paginate(allProjects, { pageSize: 6 });
+  return paginate(allProjects, { pageSize: 2 });
 }
 
 interface Props {
@@ -30,6 +31,10 @@ interface Props {
 const { page } = Astro.props;
 const title = `Projects - ${AppConfig.site_name} - ${page.currentPage}`;
 const description = 'A page for all my notable projects';
+
+const urls = page.data.map(
+  (project) => `${getUrl('projects')}/${project.slug}/`
+);
 ---
 
 <Base head={{ title, description }}>
@@ -40,7 +45,7 @@ const description = 'A page for all my notable projects';
     />
   </Section>
   <Section>
-    <ProjectCatalog projects={page.data} />
+    <ProjectCatalog projects={page.data} urls={urls} />
   </Section>
   <Section>
     <NewerOlderPagination page={page} />

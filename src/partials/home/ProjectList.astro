@@ -11,6 +11,9 @@ import { getUrl } from '@/utils/URLMap';
 
 const allProjects = await getCollection('projects');
 const lastThreeProjects = allProjects.slice(0, 3);
+const urls = lastThreeProjects.map(
+  (project) => `${getUrl('projects')}/${project.slug}/`
+);
 ---
 
 <Section>
@@ -21,5 +24,5 @@ const lastThreeProjects = allProjects.slice(0, 3);
     <ViewAllButton href={getUrl('projects')}>View all projects →</ViewAllButton>
   </div>
 
-  <ProjectCatalog projects={lastThreeProjects} />
+  <ProjectCatalog projects={lastThreeProjects} urls={urls} />
 </Section>
