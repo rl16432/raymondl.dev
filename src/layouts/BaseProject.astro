@@ -9,7 +9,7 @@ export interface Props {
 }
 
 const { frontmatter } = Astro.props as Props;
-const title = `${frontmatter.name} - ${AppConfig.site_name}`;
+const title = `${frontmatter.name} - Projects - ${AppConfig.site_name}`;
 ---
 
 <Base head={{ title, description: frontmatter.description }}>
