@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+
+import Base from '@/layouts/Base.astro';
+import AboutMe from '@/partials/home/AboutMe.astro';
+import { Hero } from '@/partials/home/Hero';
+import ProjectList from '@/partials/home/ProjectList.astro';
+import { RecentPosts } from '@/partials/home/RecentPosts';
+import { AppConfig } from '@/utils/AppConfig';
+import { sortByDate } from '@/utils/Posts';
+import { getUrl } from '@/utils/URLMap';
+
+const allPosts = await getCollection('posts');
+const sortedPosts = sortByDate(allPosts);
+const lastThreePosts = sortedPosts.slice(0, 3);
+const urls = lastThreePosts.map((post) => `${getUrl('posts')}/${post.slug}/`);
+
+const { title } = AppConfig;
+const { description } = AppConfig;
+---
+
+<Base head={{ title, description }}>
+  <Hero />
+  <AboutMe />
+  <ProjectList />
+  <RecentPosts postList={lastThreePosts} urls={urls} />
+</Base>

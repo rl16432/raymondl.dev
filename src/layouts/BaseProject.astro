@@ -1,0 +1,33 @@
+---
+import { Section } from '@/components';
+import type { ProjectFrontmatter } from '@/content/_schemas';
+import Base from '@/layouts/Base.astro';
+import { AppConfig } from '@/utils/AppConfig';
+import type { ClassModifiers } from '@/utils/Tailwind';
+import { computeClassName } from '@/utils/Tailwind';
+
+export interface Props {
+  frontmatter: ProjectFrontmatter;
+}
+
+const PROSE_MODIFIERS: ClassModifiers = {
+  'prose-a': ['text-cyan-400', 'no-underline', { hover: ['underline'] }],
+  'prose-img': ['rounded-lg', 'border-2', 'border-sky-500'],
+  'prose-table': ['text-base'],
+};
+
+const { frontmatter } = Astro.props as Props;
+const title = `${frontmatter.name} - Projects - ${AppConfig.site_name}`;
+---
+
+<Base head={{ title, description: frontmatter.description }}>
+  <Section>
+    <div
+      class={`prose prose-invert mx-auto mt-8 max-w-3xl ${computeClassName(
+        PROSE_MODIFIERS
+      )}`}
+    >
+      <slot />
+    </div>
+  </Section>
+</Base>

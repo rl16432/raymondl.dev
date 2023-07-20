@@ -1,0 +1,28 @@
+---
+import { getCollection } from 'astro:content';
+
+import {
+  GradientText,
+  ProjectCatalog,
+  Section,
+  ViewAllButton,
+} from '@/components';
+import { getUrl } from '@/utils/URLMap';
+
+const allProjects = await getCollection('projects');
+const lastThreeProjects = allProjects.slice(0, 3);
+const urls = lastThreeProjects.map(
+  (project) => `${getUrl('projects')}/${project.slug}/`
+);
+---
+
+<Section>
+  <div slot="title" class="flex items-center justify-between">
+    <div>
+      Recent <GradientText>Projects</GradientText>
+    </div>
+    <ViewAllButton href={getUrl('projects')}>View all projects →</ViewAllButton>
+  </div>
+
+  <ProjectCatalog projects={lastThreeProjects} urls={urls} />
+</Section>
