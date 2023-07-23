@@ -6,12 +6,13 @@ imgAlt: 'Unlimited Wordle project logo'
 skills: ['JavaScript', 'React', 'Bootstrap']
 source: "https://github.com/rl16432/unlimited-wordle"
 ---
-# Unlimited Wordle
 
 ![Unlimited Wordle screenshot](/assets/images/unlimited-wordle-1.gif)
 ## About
 
 A spin-off of the popular word guessing game Wordle. The game utilises a dictionary of words and randomly generates the correct word, allowing the user to play as many times as they want. Additional options exist, including the ability to change the word length and the number of guesses.
+
+I worked on this early 2022, when Wordle was at its peak. This taught me a lot about front-end development including webpage styling and implementing interactivity using React. While there is a lot I would have done differently looking back to improve the code quality and project structure, this was a valuable learning experience for me.
 
 ## Instructions 
 

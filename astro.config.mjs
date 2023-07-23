@@ -7,7 +7,6 @@ import { astroImageTools } from 'astro-imagetools';
 
 // https://astro.build/config
 export default defineConfig({
-  // base: '.', // Set a path prefix.
   site: 'https://raymondl.dev', // Use to generate your sitemap and canonical URLs in your final build.
   markdown: {
     shikiConfig: {
@@ -20,7 +19,15 @@ export default defineConfig({
     react(),
     tailwind({}),
     sitemap(),
-    robotsTxt(),
+    robotsTxt({
+      policy: [
+        {
+          userAgent: '*',
+          allow: '/',
+          disallow: '/assets',
+        },
+      ],
+    }),
     astroImageTools,
   ],
 });
