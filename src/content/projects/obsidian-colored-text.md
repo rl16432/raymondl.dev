@@ -7,8 +7,6 @@ imgAlt: 'Obsidian Colored Text project logo'
 source: "https://github.com/erincayaz/obsidian-colored-text"
 ---
 
-# Obsidian Colored Text
-
 ![Unlimited Wordle screenshot](/assets/images/obsidian-colored-text-1.gif)
 
 ## About

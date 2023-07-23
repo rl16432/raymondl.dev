@@ -7,8 +7,6 @@ imgAlt: 'raymondl.dev project logo'
 source: https://github.com/rl16432/raymondl.dev
 ---
 
-# raymondl.dev
-
 ![raymondl.dev screenshot](/assets/images/raymondl-dev.png)
 ## About
 

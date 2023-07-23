@@ -6,7 +6,6 @@ imgAlt: 'Unlimited Wordle project logo'
 skills: ['JavaScript', 'React', 'Bootstrap']
 source: "https://github.com/rl16432/unlimited-wordle"
 ---
-# Unlimited Wordle
 
 ![Unlimited Wordle screenshot](/assets/images/unlimited-wordle-1.gif)
 ## About
