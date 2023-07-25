@@ -40,11 +40,9 @@ const title = `${frontmatter.name} - Projects - ${AppConfig.site_name}`;
         .join(' ')}`}
     >
       <h1 class="mb-2 text-center">{frontmatter.name}</h1>
-      <a
-        class="mx-auto block text-center"
-        target="_blank"
-        href={frontmatter.source}>View source code</a
-      >
+      <div class="w-full text-center">
+        <a target="_blank" href={frontmatter.source}>View source code</a>
+      </div>
       <slot />
     </div>
   </Section>
