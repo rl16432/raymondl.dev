@@ -41,7 +41,13 @@ const title = `${frontmatter.name} - Projects - ${AppConfig.site_name}`;
     >
       <h1 class="mb-2 text-center">{frontmatter.name}</h1>
       <div class="w-full text-center">
-        <a target="_blank" href={frontmatter.source}>View source code</a>
+        {
+          frontmatter.source && (
+            <a target="_blank" href={frontmatter.source}>
+              View source code
+            </a>
+          )
+        }
       </div>
       <slot />
     </div>
