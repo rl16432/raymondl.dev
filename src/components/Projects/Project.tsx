@@ -38,7 +38,7 @@ const Project = (props: IProjectProps) => (
       <a
         href={props.source}
         target="_blank"
-        className="mt-5 w-10 flex-none hover:translate-y-1 md:ml-auto md:mr-5 md:mt-0"
+        className="mt-5 w-12 flex-none hover:translate-y-1 md:ml-auto md:mr-5 md:mt-0"
       >
         <img className="w-full" src="/assets/images/source-icon.svg" />
       </a>
