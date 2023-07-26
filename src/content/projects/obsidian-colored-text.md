@@ -1,10 +1,11 @@
 ---
 name: Obsidian Colored Text
-description: A lightweight open-source plugin which for Obsidian which I have contributed to, allowing users to select and add color to their notes.
+description: Contributed to a lightweight open-source plugin for Obsidian which allows users to select and add color to their notes
 skills: ['TypeScript', 'React']
 imgSrc: '/assets/images/project-web-design.png'
 imgAlt: 'Obsidian Colored Text project logo'
 source: "https://github.com/erincayaz/obsidian-colored-text"
+order: 2
 ---
 
 ![Unlimited Wordle screenshot](/assets/images/obsidian-colored-text-1.gif)

@@ -5,6 +5,7 @@ skills: ['Astro', 'TypeScript', 'React', 'TailwindCSS']
 imgSrc: '/assets/images/ray-logo.svg'
 imgAlt: 'raymondl.dev project logo'
 source: https://github.com/rl16432/raymondl.dev
+order: 1
 ---
 
 ![raymondl.dev screenshot](/assets/images/raymondl-dev.png)

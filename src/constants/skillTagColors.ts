@@ -3,6 +3,7 @@ import type { Values } from '@/types/TypeUnion';
 export const ColorTags = {
   SLATE: 'SLATE',
   GRAY: 'GRAY',
+  DARK: 'DARK',
   ZINC: 'ZINC',
   NEUTRAL: 'NEUTRAL',
   STONE: 'STONE',
@@ -32,6 +33,12 @@ export const SKILLS = [
   'TypeScript',
   'React',
   'TailwindCSS',
+  'Redux',
+  'Next.js',
+  'C#',
+  'ASP.NET Core',
+  'MS SQL Server',
+  'Azure',
 ] as const;
 
 export type Skills = (typeof SKILLS)[number];
@@ -47,4 +54,10 @@ export const SKILL_COLOR_MAP: SkillColorMap = {
   TypeScript: ColorTags.ROSE,
   React: ColorTags.BLUE,
   TailwindCSS: ColorTags.SKY,
+  Redux: ColorTags.CYAN,
+  'Next.js': ColorTags.DARK,
+  'C#': ColorTags.GREEN,
+  'ASP.NET Core': ColorTags.SKY,
+  'MS SQL Server': ColorTags.AMBER,
+  Azure: ColorTags.BLUE,
 } as const;

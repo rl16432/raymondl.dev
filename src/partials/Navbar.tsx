@@ -39,7 +39,7 @@ const Navbar = () => (
       }
     >
       <NavMenuItem href="/posts/" openNewTab={false}>
-        Blogs
+        Blog
       </NavMenuItem>
       <NavMenuItem href="/projects/" openNewTab={false}>
         Projects

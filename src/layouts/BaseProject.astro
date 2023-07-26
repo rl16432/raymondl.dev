@@ -27,7 +27,7 @@ const PROSE_MODIFIERS: ClassModifiers = {
 };
 
 const { frontmatter } = Astro.props as Props;
-const title = `${frontmatter.name} - Projects - ${AppConfig.site_name}`;
+const title = `${frontmatter.name} | Projects | ${AppConfig.title}`;
 ---
 
 <Base head={{ title, description: frontmatter.description }}>
@@ -40,11 +40,36 @@ const title = `${frontmatter.name} - Projects - ${AppConfig.site_name}`;
         .join(' ')}`}
     >
       <h1 class="mb-2 text-center">{frontmatter.name}</h1>
-      <a
-        class="mx-auto block text-center"
-        target="_blank"
-        href={frontmatter.source}>View source code</a
-      >
+      <div class="w-full text-center">
+        {
+          () => {
+            if (frontmatter.source === undefined) {
+              return <Fragment />;
+            }
+            if (typeof frontmatter.source === 'string') {
+              return (
+                <a target="_blank" href={frontmatter.source}>
+                  View source code
+                </a>
+              );
+            }
+            return (
+              <>
+                <div class="font-normal">View source code below</div>
+                <div class="flex flex-row justify-center gap-5">
+                  {Object.entries(frontmatter.source).map(([name, url]) => (
+                    <div>
+                      <a target="_blank" href={url}>
+                        {name}
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </>
+            );
+          }
+        }
+      </div>
       <slot />
     </div>
   </Section>
