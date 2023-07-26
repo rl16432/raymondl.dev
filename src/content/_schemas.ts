@@ -13,7 +13,7 @@ export const projectSchema = z.object({
   skills: z.array(z.enum(SKILLS)),
   imgSrc: z.string(),
   imgAlt: z.string(),
-  source: z.string().url().optional(),
+  source: z.union([z.record(z.string(), z.string().url()), z.string().url()]),
 });
 
 export const postSchema = z.object({

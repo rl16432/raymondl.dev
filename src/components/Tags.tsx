@@ -11,6 +11,7 @@ type ITagsProps = {
 const colorToClassMap = {
   [ColorTags.SLATE]: 'bg-slate-400 text-slate-900',
   [ColorTags.GRAY]: 'bg-gray-400 text-gray-900',
+  [ColorTags.DARK]: 'bg-gray-900 text-gray-400',
   [ColorTags.ZINC]: 'bg-zinc-400 text-zinc-900',
   [ColorTags.NEUTRAL]: 'bg-neutral-400 text-neutral-900',
   [ColorTags.STONE]: 'bg-stone-400 text-stone-900',
