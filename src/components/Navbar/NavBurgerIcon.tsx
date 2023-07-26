@@ -10,7 +10,11 @@ const NavBurgerIcon = (props: INavBurgerIconProps) => (
       props.clicked === true ? 'from-slate-900 to-slate-600' : ''
     } p-2 hover:brightness-75 md:hidden`}
   >
-    <img src="/assets/images/menu-icon.svg" className="w-6" />
+    <img
+      src="/assets/images/menu-icon.svg"
+      alt="Navbar menu icon"
+      className="w-6"
+    />
   </button>
 );
 

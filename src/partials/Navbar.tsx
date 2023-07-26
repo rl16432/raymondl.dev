@@ -7,7 +7,13 @@ const Navbar = () => (
       logo={
         <a href="/">
           <Logo
-            icon={<img className="w-8" src="/assets/images/ray-logo.svg" />}
+            icon={
+              <img
+                className="w-8"
+                src="/assets/images/ray-logo.svg"
+                alt="raymondl logo"
+              />
+            }
             name="raymond.l"
           />
         </a>
