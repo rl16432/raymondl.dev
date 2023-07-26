@@ -14,6 +14,7 @@ export const projectSchema = z.object({
   imgSrc: z.string(),
   imgAlt: z.string(),
   source: z.union([z.record(z.string(), z.string().url()), z.string().url()]),
+  order: z.number(),
 });
 
 export const postSchema = z.object({

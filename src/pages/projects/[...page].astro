@@ -32,6 +32,8 @@ const { page } = Astro.props;
 const title = `Projects - ${AppConfig.site_name} - ${page.currentPage}`;
 const description = 'A page for all my notable projects';
 
+const sortedProjects = page.data.sort((a, b) => a.data.order - b.data.order);
+
 const urls = page.data.map(
   (project) => `${getUrl('projects')}/${project.slug}/`
 );
@@ -45,7 +47,7 @@ const urls = page.data.map(
     />
   </Section>
   <Section>
-    <ProjectCatalog projects={page.data} urls={urls} />
+    <ProjectCatalog projects={sortedProjects} urls={urls} />
   </Section>
   <Section>
     <NewerOlderPagination page={page} />

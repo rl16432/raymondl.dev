@@ -5,6 +5,7 @@ skills: ['TypeScript', 'React']
 imgSrc: '/assets/images/project-web-design.png'
 imgAlt: 'Obsidian Colored Text project logo'
 source: "https://github.com/erincayaz/obsidian-colored-text"
+order: 2
 ---
 
 ![Unlimited Wordle screenshot](/assets/images/obsidian-colored-text-1.gif)

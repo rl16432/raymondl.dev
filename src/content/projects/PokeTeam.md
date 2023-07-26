@@ -8,8 +8,9 @@ source: {
   'Frontend': 'https://github.com/rl16432/poketeam-frontend', 
   'Backend': 'https://github.com/rl16432/poketeam-backend'
 }
-
+order: 3
 ---
+
 ## About
 
 This is a full stack web application I built which served as a huge learning experience for me, gaining exposure to frontend interaction testing with Storybook, API development with ASP.NET, CI/CD and cloud deployments to name a few.
@@ -18,11 +19,11 @@ The app allows users to create a team of Pokemon of their choice, and view the t
 ## Demo
 
 ### Adding Pokemon
-![Adding Pokemon](https://user-images.githubusercontent.com/65014987/216911064-59cc17ce-6a0c-47eb-a069-06aab605cd65.gif)
+![Adding Pokemon](/assets/images/poketeam-demo-1.gif)
 ### View Trainers
-![View Trainers](https://user-images.githubusercontent.com/65014987/216911157-482bdad1-7b2b-4ed0-a86f-620b6f3310cd.gif)
+![View Trainers](/assets/images/poketeam-demo-2.gif)
 ### Create Trainer Account
-![Create Trainer Account](https://user-images.githubusercontent.com/65014987/216911168-52d27573-bbb2-4996-b0c2-10f2fbf3fc86.gif)
+![Create Trainer Account](/assets/images/poketeam-demo-3.gif)
 
 ## PokéApi
 https://pokeapi.co

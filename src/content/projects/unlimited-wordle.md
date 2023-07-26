@@ -5,6 +5,7 @@ imgSrc: '/assets/images/unlimited-wordle-logo.png'
 imgAlt: 'Unlimited Wordle project logo'
 skills: ['JavaScript', 'React', 'Bootstrap']
 source: "https://github.com/rl16432/unlimited-wordle"
+order: 4
 ---
 
 ![Unlimited Wordle screenshot](/assets/images/unlimited-wordle-1.gif)
