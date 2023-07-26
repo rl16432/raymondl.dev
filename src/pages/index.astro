@@ -15,11 +15,11 @@ const sortedPosts = sortByDate(allPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
 const urls = lastThreePosts.map((post) => `${getUrl('posts')}/${post.slug}/`);
 
-const { title } = AppConfig;
+const siteName = AppConfig.site_name;
 const { description } = AppConfig;
 ---
 
-<Base head={{ title, description }}>
+<Base head={{ title: siteName, description }}>
   <Hero />
   <AboutMe />
   <ProjectList />

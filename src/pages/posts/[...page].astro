@@ -31,7 +31,7 @@ interface Props {
 }
 
 const { page } = Astro.props;
-const title = `Blogs - ${AppConfig.site_name} - ${page.currentPage}`;
+const title = `Blogs | ${AppConfig.title} | ${page.currentPage}`;
 const description = 'raymondl.dev blog posts';
 const urls = page.data.map((post) => `${getUrl('posts')}/${post.slug}/`);
 ---

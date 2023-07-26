@@ -27,7 +27,7 @@ const PROSE_MODIFIERS: ClassModifiers = {
 };
 
 const { frontmatter } = Astro.props as Props;
-const title = `${frontmatter.name} - Projects - ${AppConfig.site_name}`;
+const title = `${frontmatter.name} | Projects | ${AppConfig.title}`;
 ---
 
 <Base head={{ title, description: frontmatter.description }}>
