@@ -30,7 +30,7 @@ interface Props {
 
 const { page } = Astro.props;
 const title = `Projects | ${AppConfig.title} | ${page.currentPage}`;
-const description = 'A page for all my notable projects';
+const description = 'I will use this page to display all my notable projects';
 
 const sortedProjects = page.data.sort((a, b) => a.data.order - b.data.order);
 

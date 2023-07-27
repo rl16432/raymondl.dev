@@ -1,6 +1,6 @@
 ---
 name: PokéTeam
-description: A full stack web application for users to create and share their dream Pokémon team 
+description: A full stack web application for users to create and share their dream Pokémon team
 skills: ['TypeScript', 'React', 'Redux', 'Next.js', 'C#', 'ASP.NET Core', 'MS SQL Server', 'Azure']
 imgSrc: '/assets/images/poketeam.png'
 imgAlt: 'PokéTeam project logo'
