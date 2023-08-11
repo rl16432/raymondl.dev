@@ -1,4 +1,5 @@
 {
+  "prettier.documentSelectors": ["**/*.astro"],
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
   "search.exclude": {
@@ -17,6 +18,9 @@
     "typescriptreact",
     "astro"
   ],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "jest.autoRun": {
     "watch": true, // Start the jest with the watch flag
     "onSave": "test-src-file", // Trigger test run for the given test or source file upon save
@@ -32,6 +36,6 @@
     "editor.defaultFormatter": "redhat.vscode-xml"
   },
   "[astro]": {
-    "editor.defaultFormatter": "astro-build.astro-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }

@@ -14,7 +14,7 @@ const sortedProjects = allProjects.sort((a, b) => a.data.order - b.data.order);
 const lastThreeProjects = sortedProjects.slice(0, 3);
 
 const urls = lastThreeProjects.map(
-  (project) => `${getUrl('projects')}/${project.slug}/`
+  (project) => `${getUrl('projects')}/${project.slug}/`,
 );
 ---
 
