@@ -18,6 +18,9 @@
     "typescriptreact",
     "astro"
   ],
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
   "jest.autoRun": {
     "watch": true, // Start the jest with the watch flag
     "onSave": "test-src-file", // Trigger test run for the given test or source file upon save
