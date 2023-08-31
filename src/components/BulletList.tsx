@@ -18,7 +18,7 @@ const BulletList = ({ points }: IBulletListProps) => {
         <li key={uuidv4()}>
           {p.title !== undefined ? (
             <>
-              <span className="font-bold">
+              <span className="font-semibold">
                 <GradientText>{p.title}</GradientText>
               </span>{' '}
               - {p.description}
