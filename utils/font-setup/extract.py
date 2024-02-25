@@ -25,5 +25,3 @@ with open(font_links_path, 'r') as links:
       with open(join(font_output_dir, file_name), "wb") as font:
          for chunk in r.iter_content():
             font.write(chunk)
-  
-    
