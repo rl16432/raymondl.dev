@@ -49,11 +49,10 @@ const urls = page.data.map(
   <Section>
     <ProjectCatalog projects={sortedProjects} urls={urls} />
   </Section>
-
   {
     page.url.next == null && page.url.prev == null ? null : (
       <Section>
-        <NewerOlderPagination page={page} />
+        <NewerOlderPagination page={page} name={"Projects"}/>
       </Section>
     )
   }

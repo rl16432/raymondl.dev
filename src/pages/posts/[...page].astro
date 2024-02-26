@@ -44,15 +44,13 @@ const urls = page.data.map((post) => `${getUrl("posts")}/${post.slug}/`);
       description="I will use this page to write about anything I find interesting"
     />
   </Section>
-
   <Section>
     <BlogGallery postList={page.data} urls={urls} />
   </Section>
-  
   {
     page.url.next == null && page.url.prev == null ? null : (
       <Section>
-        <NewerOlderPagination page={page} />
+        <NewerOlderPagination page={page} name={"Posts"} />
       </Section>
     )
   }
