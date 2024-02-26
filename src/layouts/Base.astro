@@ -1,6 +1,4 @@
 ---
-import '@/global.css';
-
 import { Footer } from '@/partials/Footer';
 import { Navbar } from '@/partials/Navbar';
 import { AppConfig } from '@/utils/AppConfig';
@@ -25,8 +23,11 @@ const {
     <meta name="description" content={description} />
     <meta name="author" content={AppConfig.author} />
 
+    <link rel="preload" href="/assets/fonts/fira-sans-woff2.css" as="style" crossorigin />
     <link rel="alternate" type="application/rss+xml" href="/rss.xml" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" href="/assets/fonts/fira-sans-woff2.css" />
     <!-- <links
       rel="preload"
       href="/assets/fonts/fira-sans-woff2/va9B4kDNxMZdWfMOD5VnLK3eRhf6.woff2"
