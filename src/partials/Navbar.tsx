@@ -14,7 +14,7 @@ const Navbar = () => (
                 alt="raymondl logo"
               />
             }
-            name="raymond.l"
+            name="raymondl.dev"
           />
         </a>
       }

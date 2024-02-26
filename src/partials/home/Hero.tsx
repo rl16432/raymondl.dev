@@ -12,19 +12,15 @@ const Hero = () => (
       }
       description={
         <>
-          Penultimate Year <GradientText>Software Engineering</GradientText>{' '}
-          Student @ University of Auckland
+          Final Year <GradientText>Software Engineering</GradientText> Student @
+          University of Auckland
         </>
       }
       avatar={
         <div
           className={`h-auto max-w-xs rounded-md bg-gradient-to-r ${GRADIENT_MAIN} p-1`}
         >
-          <img
-            className="rounded-md"
-            src="/assets/images/me.jpg"
-            alt="A picture of me!"
-          />
+          <img className="rounded-md" src="/assets/images/me.jpg" alt="Me" />
         </div>
       }
       socialButtons={
