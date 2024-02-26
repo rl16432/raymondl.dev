@@ -1,41 +1,41 @@
 ---
-import type { Page } from 'astro';
-import type { CollectionEntry } from 'astro:content';
-import { getCollection } from 'astro:content';
+import type { Page } from "astro";
+import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 
 import {
   NewerOlderPagination,
   PaginationHeader,
   ProjectCatalog,
   Section,
-} from '@/components';
-import Base from '@/layouts/Base.astro';
-import { AppConfig } from '@/utils/AppConfig';
-import { getUrl } from '@/utils/URLMap';
+} from "@/components";
+import Base from "@/layouts/Base.astro";
+import { AppConfig } from "@/utils/AppConfig";
+import { getUrl } from "@/utils/URLMap";
 
 type GetStaticPaths = {
   paginate: any;
 }; // Overrides `GetStaticPathsOptions` types from Astro
 
 export async function getStaticPaths({ paginate }: GetStaticPaths) {
-  const allProjects = await getCollection('projects');
+  const allProjects = await getCollection("projects");
 
   // Return a paginated collection of paths for all posts
   return paginate(allProjects, { pageSize: 6 });
 }
 
 interface Props {
-  page: Page<CollectionEntry<'projects'>>;
+  page: Page<CollectionEntry<"projects">>;
 }
 
 const { page } = Astro.props;
 const title = `Projects | ${AppConfig.title} | ${page.currentPage}`;
-const description = 'I will use this page to display all my notable projects';
+const description = "I will use this page to display all my notable projects";
 
 const sortedProjects = page.data.sort((a, b) => a.data.order - b.data.order);
 
 const urls = page.data.map(
-  (project) => `${getUrl('projects')}/${project.slug}/`,
+  (project) => `${getUrl("projects")}/${project.slug}/`,
 );
 ---
 
@@ -49,7 +49,12 @@ const urls = page.data.map(
   <Section>
     <ProjectCatalog projects={sortedProjects} urls={urls} />
   </Section>
-  <Section>
-    <NewerOlderPagination page={page} />
-  </Section>
+
+  {
+    page.url.next == null && page.url.prev == null ? null : (
+      <Section>
+        <NewerOlderPagination page={page} />
+      </Section>
+    )
+  }
 </Base>
