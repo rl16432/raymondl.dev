@@ -8,6 +8,7 @@ import { FooterCopyright } from './FooterCopyright';
 import { GradientText } from './GradientText';
 import { HeroAvatar } from './HeroAvatar';
 import { HeroSocial } from './HeroSocial';
+import { InlineLink } from './InlineLink';
 import { Logo } from './Logo';
 import { NavbarResponsive } from './Navbar/NavbarResponsive';
 import { NavMenu } from './Navbar/NavMenu';
@@ -30,6 +31,7 @@ export {
   GradientText,
   HeroAvatar,
   HeroSocial,
+  InlineLink,
   Logo,
   NavbarResponsive,
   NavMenu,
