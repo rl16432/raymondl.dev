@@ -1,9 +1,10 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-import { AboutMeEntry, BulletList, GradientText, Section } from '@/components';
+import { AboutMeEntry, BulletList, GradientText, Section, InlineLink } from "@/components";
 
-const allHobbies = await getCollection('hobbies');
+const allHobbies = await getCollection("hobbies");
+const softeng325Link = "https://app.response.auckland.ac.nz/e/es?s=810866859&e=715881&elqTrackId=9e5b96b6a3df48c88f32dbb4b104bd61&elq=f262858aaac14be6b1f5c9a014e8a337&elqaid=10300&elqat=1";
 ---
 
 <Section>
@@ -14,8 +15,9 @@ const allHobbies = await getCollection('hobbies');
   <div class="flex flex-col gap-6">
     <AboutMeEntry title="Summary">
       <p class="min-w-0 flex-auto text-lg">
-        I love to combine my skills and interests to create memorable
-        experiences for the people around me.
+        I like to be constantly learning new things and leverage this to
+        make myself a more adaptable engineer, capable of making a difference
+        wherever I go.
       </p>
     </AboutMeEntry>
     <AboutMeEntry title="Education">
@@ -23,9 +25,10 @@ const allHobbies = await getCollection('hobbies');
         <span class="font-semibold">
           <GradientText>University of Auckland</GradientText>
         </span><br />
-         Bachelor of Engineering (Honours) - Software Engineering<br />
-         Cumulative GPA: 8.74/9.0<br />
-         Dean's Honours List - 2021, 2022, 2023
+        Bachelor of Engineering (Honours) - Software Engineering<br />
+        Cumulative GPA: 8.74/9.0<br />
+        First in Course Award in <InlineLink href={softeng325Link}>SOFTENG325</InlineLink> - Software Architecture<br />
+        Dean's Honours List - 2021, 2022, 2023
       </p>
     </AboutMeEntry>
     <AboutMeEntry title="Experience">
@@ -33,12 +36,12 @@ const allHobbies = await getCollection('hobbies');
         <span class="font-semibold">
           <GradientText>University of Auckland</GradientText>
         </span><br />
-         • Summer Research Scholarship | Nov 2023 - Feb 2024<br />
-         • Teaching Assistant | Mar 2023 - Nov 2023<br /><br />
+        • Summer Research Scholarship | Nov 2023 - Feb 2024<br />
+        • Teaching Assistant | Mar 2023 - Nov 2023<br /><br />
         <span class="font-semibold">
           <GradientText>Southern Cross Health Society</GradientText>
         </span><br />
-         • Data Analyst Intern | Dec 2021 - Aug 2023
+        • Data Analyst Intern | Dec 2021 - Aug 2023
       </p>
     </AboutMeEntry>
     <AboutMeEntry title="Hobbies">

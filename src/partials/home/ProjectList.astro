@@ -11,9 +11,9 @@ import { getUrl } from '@/utils/URLMap';
 
 const allProjects = await getCollection('projects');
 const sortedProjects = allProjects.sort((a, b) => a.data.order - b.data.order);
-const lastThreeProjects = sortedProjects.slice(0, 3);
+const mainProjects = sortedProjects.slice(0, 2);
 
-const urls = lastThreeProjects.map(
+const urls = mainProjects.map(
   (project) => `${getUrl('projects')}/${project.slug}/`,
 );
 ---
@@ -26,5 +26,5 @@ const urls = lastThreeProjects.map(
     <ViewAllButton href={getUrl('projects')}>View all projects →</ViewAllButton>
   </div>
 
-  <ProjectCatalog projects={lastThreeProjects} urls={urls} />
+  <ProjectCatalog projects={mainProjects} urls={urls} />
 </Section>
