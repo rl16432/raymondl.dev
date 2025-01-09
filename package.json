@@ -57,7 +57,9 @@
     "date-fns": "^3.3.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "uuid": "^9.0.1"
+    "react-photo-album": "^3.0.2",
+    "uuid": "^9.0.1",
+    "yet-another-react-lightbox": "^3.21.7"
   },
   "author": "Ixartz (https://github.com/ixartz)"
 }

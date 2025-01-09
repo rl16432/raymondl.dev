@@ -1,0 +1,19 @@
+---
+import { PostHeader, Section } from "@/components";
+import PostContent from "@/components/Blog/PostContent.astro";
+import type { PostFrontmatter } from "@/content/_schemas";
+import { AppConfig } from "@/utils/AppConfig";
+
+interface IBlogPostProps {
+  frontmatter: PostFrontmatter;
+}
+
+const props = Astro.props as IBlogPostProps;
+---
+<Section>
+  <PostHeader content={props.frontmatter} author={AppConfig.author}/>
+
+  <PostContent content={props.frontmatter}>
+    <slot />
+  </PostContent>
+</Section>

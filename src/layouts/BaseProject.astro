@@ -2,29 +2,12 @@
 import { Section } from '@/components';
 import type { ProjectFrontmatter } from '@/content/_schemas';
 import Base from '@/layouts/Base.astro';
+import Content from '@/partials/Content.astro';
 import { AppConfig } from '@/utils/AppConfig';
 
 export interface Props {
   frontmatter: ProjectFrontmatter;
 }
-
-type ClassModifiers = {
-  [key: string]: string[];
-};
-
-const PROSE_MODIFIERS: ClassModifiers = {
-  'prose-a': [
-    'prose-a:text-cyan-400',
-    'prose-a:no-underline',
-    'hover:prose-a:underline',
-  ],
-  'prose-img': [
-    'prose-img:rounded-lg',
-    'prose-img:border-2',
-    'prose-img:border-sky-500',
-  ],
-  'prose-table': ['prose-table:text-base'],
-};
 
 const { frontmatter } = Astro.props as Props;
 const title = `${frontmatter.name} | Projects | ${AppConfig.title}`;
@@ -32,13 +15,7 @@ const title = `${frontmatter.name} | Projects | ${AppConfig.title}`;
 
 <Base head={{ title, description: frontmatter.description }}>
   <Section>
-    <div
-      class={`prose prose-invert mx-auto mt-8 max-w-3xl ${Object.values(
-        PROSE_MODIFIERS,
-      )
-        .map((arr) => arr.join(' '))
-        .join(' ')}`}
-    >
+    <Content class="prose prose-invert mx-auto mt-8 max-w-3xl">
       <h1 class="mb-2 text-center">{frontmatter.name}</h1>
       <div class="w-full text-center">
         {
@@ -71,6 +48,6 @@ const title = `${frontmatter.name} | Projects | ${AppConfig.title}`;
         }
       </div>
       <slot />
-    </div>
+    </Content>
   </Section>
 </Base>
