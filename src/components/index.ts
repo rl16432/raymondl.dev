@@ -1,7 +1,6 @@
 import { AboutMeEntry } from './AboutMe/AboutMeEntry';
 import { BlogCard } from './Blog/BlogCard';
 import { BlogGallery } from './Blog/BlogGallery';
-import { PostContent } from './Blog/PostContent';
 import { PostHeader } from './Blog/PostHeader';
 import { BulletList } from './BulletList';
 import { FooterCopyright } from './FooterCopyright';
@@ -39,7 +38,6 @@ export {
   NewerOlderPagination,
   Newsletter,
   PaginationHeader,
-  PostContent,
   PostHeader,
   Project,
   ProjectCatalog,

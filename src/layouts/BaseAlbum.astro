@@ -1,0 +1,31 @@
+---
+import Base from "@/layouts/Base.astro";
+import { AppConfig } from "@/utils/AppConfig";
+
+import { RowGallery } from "@/components/Photos/RowGallery";
+import { Section } from "@/components";
+import type { AlbumDetails } from "@/content/_schemas";
+import { format } from "date-fns";
+
+export interface Props {
+  album: AlbumDetails;
+}
+
+const pageName = AppConfig.site_name;
+const { description } = AppConfig;
+
+const { album } = Astro.props as Props;
+---
+
+<Base head={{ title: pageName, description }}>
+  <Section>
+    <h1 class="text-center text-3xl font-bold">{album.title}</h1>
+
+    <div class="mt-2 text-center text-sm text-gray-400">
+      {format(new Date(album.datetime), "LLL d, yyyy")}
+    </div>
+    <div class="mt-5">
+      <RowGallery spacing={5} photos={album.photos} client:load />
+    </div>
+  </Section>
+</Base>

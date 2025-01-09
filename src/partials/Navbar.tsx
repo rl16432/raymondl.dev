@@ -50,6 +50,9 @@ const Navbar = () => (
       <NavMenuItem href="/projects/" openNewTab={false}>
         Projects
       </NavMenuItem>
+      <NavMenuItem href="/photos/" openNewTab={false}>
+        Photos
+      </NavMenuItem>
     </NavbarResponsive>
   </Section>
 );

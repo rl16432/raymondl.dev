@@ -1,0 +1,32 @@
+---
+type ClassModifiers = {
+  [key: string]: string[];
+};
+
+export interface Props {
+  class?: string;
+}
+
+const PROSE_MODIFIERS: ClassModifiers = {
+  "prose-a": [
+    "prose-a:text-cyan-400",
+    "prose-a:no-underline",
+    "hover:prose-a:underline",
+  ],
+  "prose-img": [
+    "prose-img:rounded-lg",
+    "prose-img:border-2",
+    "prose-img:border-sky-500",
+  ],
+  "prose-table": ["prose-table:text-base"],
+};
+
+const props = Astro.props as Props;
+---
+<div
+  class={`${props.class} ${Object.values(PROSE_MODIFIERS)
+    .map((arr) => arr.join(" "))
+    .join(" ")}`}
+>
+  <slot />
+</div>

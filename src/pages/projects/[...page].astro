@@ -21,7 +21,7 @@ export async function getStaticPaths({ paginate }: GetStaticPaths) {
   const allProjects = await getCollection("projects");
 
   // Return a paginated collection of paths for all posts
-  return paginate(allProjects, { pageSize: 6 });
+  return paginate(allProjects, { pageSize: 2 });
 }
 
 interface Props {

@@ -26,6 +26,21 @@ export const postSchema = z.object({
   draft: z.boolean().optional(),
 });
 
+export const photoSchema = z.object({
+  src: z.string(),
+  alt: z.string().optional(),
+  width: z.number(),
+  height: z.number(),
+});
+
+export const albumSchema = z.object({
+  title: z.string(),
+  datetime: z.string().transform((str) => new Date(str)),
+  mainPhoto: z.string(),
+  photos: z.array(photoSchema),
+});
+
 export type PostFrontmatter = z.infer<typeof postSchema>;
 export type ProjectFrontmatter = z.infer<typeof projectSchema>;
+export type AlbumDetails = z.infer<typeof albumSchema>;
 export type HobbyDetails = z.infer<typeof hobbySchema>;

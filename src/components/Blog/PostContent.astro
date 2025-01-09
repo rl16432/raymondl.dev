@@ -1,0 +1,23 @@
+---
+import type { PostFrontmatter } from "@/content/_schemas";
+import Content from "@/partials/Content.astro";
+
+interface IPostContentProps {
+  content: PostFrontmatter;
+}
+
+const props = Astro.props as IPostContentProps;
+---
+<div class="mx-auto mt-5 max-w-prose">
+  <div class="aspect-h-2 aspect-w-3">
+    <img
+      class="h-full w-full rounded-lg object-cover object-center"
+      src={props.content.imgSrc}
+      alt={props.content.imgAlt}
+    />
+  </div>
+
+  <Content class="prose prose-invert mt-8 prose-img:rounded-lg">
+    <slot />
+  </Content>
+</div>

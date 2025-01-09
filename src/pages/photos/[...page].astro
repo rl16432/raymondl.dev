@@ -1,0 +1,57 @@
+---
+import { NewerOlderPagination, PaginationHeader, Section } from "@/components";
+import { AlbumCard } from "@/components/Photos/AlbumCard";
+import Base from "@/layouts/Base.astro";
+import { AppConfig } from "@/utils/AppConfig";
+import { getUrl } from "@/utils/URLMap";
+import type { Page } from "astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+interface GetStaticPaths {
+  paginate: any;
+}
+
+export async function getStaticPaths({ paginate }: GetStaticPaths) {
+  const allAlbums = await getCollection("photos");
+  const sortedAlbums = allAlbums.sort(
+    (a, b) =>
+      b.data.datetime.valueOf() - a.data.datetime.valueOf(),
+  );
+
+  return paginate(sortedAlbums, { pageSize: 6 });
+}
+
+interface Props {
+  page: Page<CollectionEntry<"photos">>;
+}
+
+const { page } = Astro.props;
+const title = `Photos | ${AppConfig.title} | ${page.currentPage}`;
+const description = "A collection of my favorite shots";
+
+---
+<Base head={{ title, description }}>
+  <Section>
+    <PaginationHeader
+      title="Photos"
+      description={description}
+    />
+  </Section>
+  <Section className="grid grid-cols-1 md:grid-cols-2 gap-4">
+    {
+      page.data.map((album) => (
+        <AlbumCard 
+          album={album}
+          url={`${getUrl("photos")}/${album.id}/`}
+        />
+      ))
+    }
+  </Section>
+  {
+    page.url.next == null && page.url.prev == null ? null : (
+      <Section>
+        <NewerOlderPagination page={page} name={"Photos"}/>
+      </Section>
+    )
+  }
+</Base>
