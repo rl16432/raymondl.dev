@@ -12,8 +12,7 @@ const Hero = () => (
       }
       description={
         <>
-          Final Year <GradientText>Software Engineering</GradientText> Student @
-          University of Auckland
+          <GradientText>Software Engineering</GradientText> Graduate
         </>
       }
       avatar={
